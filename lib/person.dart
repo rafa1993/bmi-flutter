@@ -1,28 +1,30 @@
 class Person {
-  String name;
-  double height;
-  double weight;
+  String _name = "";
+  double _height = 0;
+  double _weight = 0;
 
-  Person({
-    required this.name,
-    required this.height,
-    required this.weight,
-  });
+//constructor
+Person(String name, double height, double weight){
+  _name = name;
+  _height = height;
+  _weight = weight;
+}
 
-  String get getName => name;
-  double get getHeight => height;
-  double get getWeight => weight;
+//getters and setters
+  String get getName => _name;
+  double get getHeight => _height;
+  double get getWeight => _weight;
 
   set setName(String name) {
-    this.name = name;
+    _name = name;
   }
 
   set setHeight(double height) {
-    this.height = height;
+    _height = height;
   }
 
   set setWeight(double weight) {
-    this.weight = weight;
+    _weight = weight;
   }
 }
 

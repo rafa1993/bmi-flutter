@@ -1,15 +1,15 @@
+import 'package:meu_imc/person.dart';
+
 class BMICalculator {
-  final double weight;
-  final double height;
   double bmi;
+  final Person person;
 
   BMICalculator({
-    required this.weight,
-    required this.height,
+    required this.person,
   });
 
   void calculateBMI() {
-    bmi = weight / (height * height);
+    bmi = person.getWeight / (person.getHeight * person.getHeight);
   }
 
   String getBMICategory() {
@@ -24,10 +24,3 @@ class BMICalculator {
     }
   }
 }
-
-// como usar
-// final calculator = BMICalculator(weight: 70, height: 1.75);
-// calculator.calculateBMI();
-
-// print(calculator.bmi); // 22.222222
-// print(calculator.getBMICategory()); // Normal
